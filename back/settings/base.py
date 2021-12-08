@@ -138,6 +138,15 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'verbose'
+        },
+        'time': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'log', 'time.log'),
+            'maxBytes': 1024 * 1024 * 50,  # 50M
+            'backupCount': 10,
+            'formatter': 'verbose',
+            'encoding': 'utf-8',
         }
     },
     'django_handlers': {
@@ -165,6 +174,10 @@ LOGGING = {
             'django_handlers': ['file', 'console'],
             'level': 'INFO',
             'propagate': True,
+        },
+        'time': {
+            'handlers': ['time'],
+            'level': 'INFO'
         }
     }
 }

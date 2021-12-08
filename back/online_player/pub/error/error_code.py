@@ -11,10 +11,19 @@ class ErrorRoot(Enum):
 
 class ErrorUserNode(Enum):
     REGISTER = '01'
+    ACCESS = '02'
 
 
 class ErrorRegisterLeaf(Enum):
     USER_EXIST = '001'
+
+
+class ErrorAccessLeaf(Enum):
+    DENIED = '001'
+
+
+register = [ErrorRoot.USER, ErrorUserNode.REGISTER]
+access = [ErrorRoot.USER, ErrorUserNode.ACCESS]
 
 
 def get_error_code(errors):

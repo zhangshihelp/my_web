@@ -5,10 +5,18 @@ ERROR_INFO = {
     ErrorRoot.USER: {
         ErrorUserNode.REGISTER: {
             ErrorRegisterLeaf.USER_EXIST: {
-                'en': '',
+                'en': 'User name already exists!',
                 'zh': '用户名已存在！',
-                'advice_en': '',
+                'advice_en': 'Please change your user name and try again!',
                 'advice_zh': '请更换用户名后重试！',
+            }
+        },
+        ErrorUserNode.ACCESS: {
+            ErrorAccessLeaf.DENIED: {
+                'en': 'User permission error, unable to access!',
+                'zh': '用户权限错误，无法访问！',
+                'advice_en': 'Please contact the administrator to confirm the permission!',
+                'advice_zh': '请联系管理员确认权限！',
             }
         }
     }
