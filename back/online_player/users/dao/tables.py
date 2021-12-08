@@ -5,6 +5,7 @@ user_table = """
                 constraint user_pk
                     primary key,
         name                varchar(20)              not null,
+        account             varchar(20)              not null,
         address             varchar(100),
         sex                 varchar(1)               not null,
         phone               varchar(20),

@@ -6,6 +6,7 @@ from online_player.pub.const.user_const import UserConst
 class User(models.Model):
     id = models.AutoField(primary_key=True, help_text='用户id')
     name = models.CharField(null=False, max_length=UserConst.NAME.value, help_text='用户姓名')
+    account = models.CharField(null=False, max_length=UserConst.ACCOUNT.value, help_text='用户账户')
     address = models.CharField(null=True, max_length=UserConst.ADDRESS.value, help_text='用户地址')
     sex = models.CharField(null=False, max_length=UserConst.SEX.value, help_text='用户性别')
     phone = models.CharField(null=True, max_length=UserConst.PHONE.value, help_text='电话')
